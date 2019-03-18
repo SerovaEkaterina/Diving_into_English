@@ -28,7 +28,7 @@ public class MainSceneActivity extends AppCompatActivity {
 
         button1 = findViewById(R.id.button_alfavit);
         button2 = findViewById(R.id.button_grammar);
-        button3 = findViewById(R.id)
+        button3 = findViewById(R.id.sound);
 
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
