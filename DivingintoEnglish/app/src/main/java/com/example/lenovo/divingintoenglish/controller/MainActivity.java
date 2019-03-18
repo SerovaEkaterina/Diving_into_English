@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.example.lenovo.divingintoenglish.MyService;
 import com.example.lenovo.divingintoenglish.R;
 
 public class MainActivity extends AppCompatActivity {
@@ -18,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        startService(new Intent(this, MyService.class));
 
         textView = findViewById(R.id.textView1);
         Typeface myFont = Typeface.createFromAsset(getAssets(), "fonts/vinetaDi.ttf");
@@ -39,5 +43,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+    public void onBackPressed() {
+        stopService(new Intent(this, MyService.class));
     }
 }
