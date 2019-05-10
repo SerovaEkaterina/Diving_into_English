@@ -2,12 +2,11 @@ package com.example.lenovo.divingintoenglish.utils;
 
 public class Constants {
 
-    public static final String letterPhotoExtra = "letterPhoto";
-    public static final String letterTranscriptionExtra = "letterTranscription";
-    public static final String letterSoundExtra = "letterSound";
-    public static final String wordPhotoExtra = "wordPhoto";
-    public static final String wordNameExtra = "wordName";
-    public static final String wordTranscriptionExtra = "wordTranscription";
-    public static final String wordTranslationExtra = "wordTranslation";
-    public static final String wordSoundExtra = "wordSound";
+    public static final String LetterPhotoExtra = "letterPhoto";
+    public static final String LetterTranscriptionExtra = "letterTranscription";
+    public static final String LetterPronunciationExtra = "letterPronunciation";
+    public static final String WordPhotoExtra = "wordPhoto";
+    public static final String WordNameExtra = "wordName";
+    public static final String WordTranscriptionExtra = "wordTranscription";
+    public static final String WordTranslationExtra = "wordTranslation";
 }

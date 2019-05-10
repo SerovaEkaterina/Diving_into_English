@@ -1,102 +1,135 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient2"
+    android:background="@drawable/gradient"
     android:orientation="vertical"
     tools:context=".controller.alphabet.InsideAlphabetActivity">
+
     <ImageView
         android:id="@+id/image_letter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/a"
         tools:ignore="ContentDescription" />
+
     <TextView
         android:id="@+id/transcription_letter"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
         android:gravity="center_horizontal"
-        android:layout_marginTop="4dp"
         android:text="[эй]"
-        android:textStyle="italic"
-        android:textSize="22dp"
         android:textColor="#FFFF"
+        android:textSize="32dp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_letter"
         tools:ignore="HardcodedText,SpUsage" />
-    <Button
-        android:id="@+id/button_letter"
-        android:layout_width="match_parent"
+
+    <ImageView
+        android:id="@+id/image_word"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:layout_marginLeft="4dp"
-        android:layout_marginRight="4dp"
-        android:text="Click me"
-        android:background="#7B68EE"
-        tools:ignore="HardcodedText" />
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:ignore="UseCompoundDrawables">
-        <ImageView
-            android:id="@+id/image_word"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="30dp"
-            app:srcCompat="@drawable/jakor"
-            tools:ignore="ContentDescription,RtlHardcoded" />
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:ignore="UselessLeaf">
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/jakor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.016"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/letter_pronunciation"
+        tools:ignore="ContentDescription,MissingConstraints,RtlHardcoded" />
+
     <TextView
         android:id="@+id/text_word"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         android:gravity="center_horizontal"
-        android:layout_marginTop="36dp"
         android:text="Anchor"
-        android:textSize="22dp"
         android:textColor="#FFFF"
+        android:textSize="32dp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.77"
+        app:layout_constraintStart_toEndOf="@+id/image_word"
+        app:layout_constraintTop_toBottomOf="@+id/letter_pronunciation"
         tools:ignore="HardcodedText,SpUsage" />
+
     <TextView
         android:id="@+id/transcription_word"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         android:gravity="center_horizontal"
-        android:layout_marginTop="4dp"
         android:text="[aнкэ]"
-        android:textSize="22dp"
         android:textColor="#FFFF"
+        android:textSize="30dp"
         android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.72"
+        app:layout_constraintStart_toEndOf="@+id/image_word"
+        app:layout_constraintTop_toBottomOf="@+id/text_word"
         tools:ignore="HardcodedText,SpUsage" />
+
     <TextView
         android:id="@+id/translation_word"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="8dp"
         android:gravity="center_horizontal"
-        android:layout_marginTop="4dp"
         android:text="Якорь"
-        android:textSize="18dp"
         android:textColor="#FFFF"
+        android:textSize="20dp"
         android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.69"
+        app:layout_constraintStart_toEndOf="@+id/image_word"
+        app:layout_constraintTop_toBottomOf="@+id/transcription_word"
         tools:ignore="HardcodedText,SpUsage" />
+
     <Button
-        android:id="@+id/button_word"
-        android:layout_width="match_parent"
+        android:id="@+id/letter_pronunciation"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:layout_marginLeft="4dp"
-        android:layout_marginRight="4dp"
-        android:text="Click me"
-        android:background="#7B68EE"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/transcription_letter"
         tools:ignore="HardcodedText" />
-</LinearLayout>
-    </LinearLayout>
-</LinearLayout>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.72"
+        app:layout_constraintStart_toEndOf="@+id/image_word"
+        app:layout_constraintTop_toBottomOf="@+id/translation_word"
+        tools:ignore="HardcodedText" />
+</android.support.constraint.ConstraintLayout>

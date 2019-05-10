@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import com.example.lenovo.divingintoenglish.R;
+import com.example.lenovo.divingintoenglish.controller.alphabet.adapter.AlphabetAdapter;
 import com.example.lenovo.divingintoenglish.model.Alphabet;
 import java.util.ArrayList;
 import java.util.List;
@@ -19,17 +20,17 @@ public class AlphabetActivity extends AppCompatActivity {
         RecyclerView recyclerView = findViewById(R.id.recycler_view);
         List<Alphabet> alphabetsList = new ArrayList<>();
 
-        alphabetsList.add(new Alphabet(R.drawable.a,"A","[эй]",R.raw.a,R.drawable.jakor,"Anchor","[анкэ]","Якорь",R.raw.anchor ));
-//        alphabetsList.add(new Alphabet(R.drawable.b,"B","[би]",R.drawable.boat1,"Boat","[боут]","Лодка"));
-//        alphabetsList.add(new Alphabet(R.drawable.c,"C","[си]",R.drawable.crab2,"Crab","[краб]","Краб"));
-//        alphabetsList.add(new Alphabet(R.drawable.d,"D","[ди]",R.drawable.dolphin,"Dolphin","[долфин]","Дельфин"));
-//        alphabetsList.add(new Alphabet(R.drawable.e,"E","[и]",R.drawable.eel,"Eel","[иел]","Угорь"));
-//        alphabetsList.add(new Alphabet(R.drawable.f,"F","[эф]",R.drawable.fish,"Fish","[фиш]","Рыба"));
+        alphabetsList.add(new Alphabet(R.drawable.a,"A","[эй]",R.drawable.jakor,R.raw.malibu,"Anchor","[áнкэ]","Якорь"));
+//        alphabetsList.add(new Alphabet(R.drawable.b,"B","[би]",R.drawable.boat1,"Boat","[бóут]","Лодка"));
+//        alphabetsList.add(new Alphabet(R.drawable.c,"C","[си]",R.drawable.crab2,"Crab","[крáб]","Краб"));
+//        alphabetsList.add(new Alphabet(R.drawable.d,"D","[ди]",R.drawable.dolphin,"Dolphin","[дóлфин]","Дельфин"));
+//        alphabetsList.add(new Alphabet(R.drawable.e,"E","[и]",R.drawable.eel,"Eel","[иéл]","Угорь"));
+//        alphabetsList.add(new Alphabet(R.drawable.f,"F","[эф]",R.drawable.fish,"Fish","[фи́  ]","Рыба"));
 //        alphabetsList.add(new Alphabet(R.drawable.g,"G","[джи]",R.drawable.gull,"Gull","[гал]","Чайка"));
 //        alphabetsList.add(new Alphabet(R.drawable.h,"H","[эйч]",R.drawable.harbour,"Harbour","[хабэ]","Порт"));
 //        alphabetsList.add(new Alphabet(R.drawable.i,"I","[ай]",R.drawable.island,"Island","[айлэнд]","Остров"));
 //        alphabetsList.add(new Alphabet(R.drawable.j,"J","[джей]",R.drawable.jellifish,"Jellyfish","[джелли'фиш]","Медуза"));
-//        alphabetsList.add(new Alphabet(R.drawable.k,"K","[кей]",R.drawable.kelp,"Kelp","[келп]","Бурая водоросль(Ламинария)"));
+//        alphabetsList.add(new Alphabet(R.drawable.k,"K","[кей]",R.drawable.kelp,"Kelp","[келп]","Бурая водоросль"));
 //        alphabetsList.add(new Alphabet(R.drawable.l,"L","[эл]",R.drawable.lighthouse,"Lighthouse","[лайт'хаус]","Маяк"));
 //        alphabetsList.add(new Alphabet(R.drawable.m,"M","[эм]",R.drawable.mast,"Mast","[маст]","Мачта"));
 //        alphabetsList.add(new Alphabet(R.drawable.n,"N","[эн]",R.drawable.navigation,"Navigation","[навигэйшн]","Навигация"));
@@ -44,7 +45,7 @@ public class AlphabetActivity extends AppCompatActivity {
 //        alphabetsList.add(new Alphabet(R.drawable.w,"W","[дабл'ю]",R.drawable.whale,"Whale","[уэйл]","Кит"));
 //        alphabetsList.add(new Alphabet(R.drawable.x,"X","[экс]",R.drawable.x_ray_fish,"X-ray fish","[экс'рэй'фиш]","'Рентгеновская' рыба"));
 //        alphabetsList.add(new Alphabet(R.drawable.y,"Y","[уай]",R.drawable.yacht,"Yacht","[ят]","Яхта"));
-//        alphabetsList.add(new Alphabet(R.drawable.z,"Z","[зед]",R.drawable.zooplankton,"Zooplankton","[зуэ'планктэн]","Зоопланктон"));
+//        alphabetsList.add(new Alphabet(R.drawable.z,"Z","[зет",R.drawable.zooplankton,"Zooplankton","[зуэ'планктэн]","Зоопланктон"));
 
         AlphabetAdapter adapter = new AlphabetAdapter(alphabetsList);
         recyclerView.setAdapter(adapter);

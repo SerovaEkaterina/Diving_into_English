@@ -5,100 +5,93 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/morskoedno4"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+    app:contentScrim="@color/colorPrimary"
+    android:background="@drawable/morskoyfom"
     tools:context=".controller.MainActivity">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center_horizontal|center"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp"
-        tools:ignore="MissingConstraints">
-        <TextView
-            android:id="@+id/textView1"
-            android:layout_width="wrap_content"
-            android:layout_height="71dp"
-            android:text="Diving"
-            android:textColor="#4682B4"
-            android:textSize="40sp"
-            tools:ignore="HardcodedText,MissingConstraints" />
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="74dp"
-            android:text="into"
-            android:textColor="#4682B4"
-            android:textSize="40sp"
-            tools:ignore="HardcodedText,MissingConstraints" />
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="150dp"
-            android:text="English"
-            android:textColor="#4682B4"
-            android:textSize="40sp"
-            tools:ignore="HardcodedText,MissingConstraints" />
-    </LinearLayout>
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="146dp"
-        android:layout_height="122dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="136dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/fish3"
-        tools:ignore="ContentDescription,MissingConstraints" />
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="89dp"
-        android:layout_height="111dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="100dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.924"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/fish1"
-        tools:ignore="ContentDescription,MissingConstraints" />
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="100dp"
-        android:layout_height="63dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="4dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.32"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/zvezda1"
-        tools:ignore="ContentDescription,MissingConstraints" />
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button_pressme"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="16dp"
-        android:background="@drawable/outline_background"
-        android:text="GO"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/roundedbutton"
+        android:text="   Press me (Нажми на меня)   "
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.971"
+        app:layout_constraintHorizontal_bias="0.92"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="HardcodedText,MissingConstraints" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+    <LinearLayout
+        android:id="@+id/linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="333dp"
+        android:layout_marginTop="108dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_pressme">
+        <TextView
+            android:id="@+id/name1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Diving"
+            android:textColor="#1a153f"
+            android:textSize="60dp"
+            android:textStyle="bold|italic"
+            tools:ignore="HardcodedText,SpUsage" />
+        <TextView
+            android:id="@+id/name2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="into"
+            android:textColor="#1a153f"
+            android:textSize="60dp"
+            android:textStyle="bold|italic"
+            tools:ignore="HardcodedText,SpUsage" />
+        <TextView
+            android:id="@+id/name3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="English"
+            android:textColor="#1a153f"
+            android:textSize="60dp"
+            android:textStyle="bold|italic"
+            tools:ignore="HardcodedText,SpUsage" />
+        <RelativeLayout
+        android:id="@+id/relative_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+            <ImageView
+                android:id="@+id/waterball"
+                android:layout_width="78dp"
+                android:layout_height="75dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                app:srcCompat="@drawable/waterball2"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/myImageViewText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignStart="@+id/waterball"
+                android:layout_alignTop="@+id/waterball"
+                android:layout_alignEnd="@+id/waterball"
+                android:layout_alignBottom="@+id/waterball"
+                android:gravity="center"
+                android:text="Go"
+                android:textColor="#000080"
+                android:textSize="16dp"
+                tools:ignore="HardcodedText,KeyboardInaccessibleWidget,RtlHardcoded" />
+        </RelativeLayout>
+    </LinearLayout>
 </android.support.constraint.ConstraintLayout>
