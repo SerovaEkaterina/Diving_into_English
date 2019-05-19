@@ -12,56 +12,63 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import com.example.lenovo.divingintoenglish.R;
 import com.example.lenovo.divingintoenglish.utils.Constants;
+import java.io.IOException;
 
 public class InsideAlphabetActivity extends AppCompatActivity {
 
-    private ImageView letter_photo,word_photo;
-    private TextView letter_transcription,word_name,word_transcription,word_translation;
-    private Button letter_pronunciation;
+    private ImageView letterPhoto, wordPhoto;
+    private TextView letterTranscription, wordName, wordTranscription, wordTranslation;
+    private Button letterPronunciation, wordPronunciation;
+
+    private MediaPlayer player = new MediaPlayer();
+    private Context context = getApplicationContext();
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inside_alphabet);
 
-        int letterPhoto = getIntent().getIntExtra(Constants.LetterPhotoExtra, 0);
-        int wordPhoto = getIntent().getIntExtra(Constants.WordPhotoExtra,0);
-        String letterTranscription = getIntent().getStringExtra(Constants.LetterTranscriptionExtra);
-        String wordName = getIntent().getStringExtra(Constants.WordNameExtra);
-        String wordTranscription = getIntent().getStringExtra(Constants.WordTranscriptionExtra);
-        String wordTranslation = getIntent().getStringExtra(Constants.WordTranslationExtra);
+        letterPhoto = findViewById(R.id.image_letter);
+        wordPhoto = findViewById(R.id.image_word);
+        letterTranscription = findViewById(R.id.transcription_letter);
+        letterPronunciation = findViewById(R.id.letter_pronunciation);
+        wordName = findViewById(R.id.text_word);
+        wordTranscription = findViewById(R.id.transcription_word);
+        wordTranslation = findViewById(R.id.translation_word);
+        wordPronunciation = findViewById(R.id.word_pronunciation);
 
-        letter_photo = findViewById(R.id.image_letter);
-        word_photo = findViewById(R.id.image_word);
-        letter_transcription = findViewById(R.id.transcription_letter);
-        letter_pronunciation = findViewById(R.id.letter_pronunciation);
-        word_name = findViewById(R.id.text_word);
-        word_transcription = findViewById(R.id.transcription_word);
-        word_translation = findViewById(R.id.translation_word);
+//        letterPronunciation.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                try {
+//                    preparePlayer("android.resource://" + getPackageName() + "/raw/" + sounds[1]);
+//                } catch (Exception e) {
+//                    System.out.println(e.toString());
+//                }
+//            }
+//        });
+//
+//        wordPronunciation.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                try {
+//                    preparePlayer("android.resource://" + getPackageName() + "/raw/" + sounds[2]);
+//                } catch (Exception e) {
+//                    System.out.println(e.toString());
+//                }
+//            }
+//        });
+//    }
 
-        letter_pronunciation.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                try {
-                    Context context = v.getContext();
-                    Uri uri = Uri.parse("android.resource://com.example.lenovo.divingintoenglish/raw/");
-                    MediaPlayer player = new MediaPlayer();
-                    player.setAudioStreamType(AudioManager.STREAM_MUSIC);
-                    player.setDataSource(context,uri);
-                    player.prepare();
-                    player.start();
-                    player.reset();
-                    player.release();
-                } catch(Exception e) {
-                    System.out.println(e.toString());
-                }
-            }
-        });
-        letter_photo.setImageResource(letterPhoto);
-        word_photo.setImageResource(wordPhoto);
-        letter_transcription.setText(letterTranscription);
-        word_name.setText(wordName);
-        word_transcription.setText(wordTranscription);
-        word_translation.setText(wordTranslation);
+        //Как читать папку
+        //https://stackoverflow.com/questions/8646984/how-to-list-files-in-an-android-directory
+//    private void preparePlayer(String path) throws IOException {
+//        Uri uri = Uri.parse(path);
+//        player.setAudioStreamType(AudioManager.STREAM_MUSIC);
+//        player.setDataSource(context, uri);
+//        player.setVolume(1, 1);
+//        player.prepare();
+//        player.start();
+//    }
     }
 }

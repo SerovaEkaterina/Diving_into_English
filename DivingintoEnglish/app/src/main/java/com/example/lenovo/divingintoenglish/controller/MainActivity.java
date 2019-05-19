@@ -1,5 +1,6 @@
 package com.example.lenovo.divingintoenglish.controller;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -27,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         button1 = findViewById(R.id.button_pressme);
         button1.setTag(0);
         button1.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
                 final TextView textView1 = findViewById(R.id.name1);
@@ -75,5 +77,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
      }
+
 }
 

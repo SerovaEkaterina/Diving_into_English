@@ -41,15 +41,15 @@ public class AlphabetAdapter extends RecyclerView.Adapter<AlphabetAdapter.myView
         holder.rootCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context,InsideAlphabetActivity.class);
-                intent.putExtra(Constants.LetterPhotoExtra,alphabet.getLetterPhoto());
-                intent.putExtra(Constants.WordPhotoExtra, alphabet.getWordPhoto());
-                intent.putExtra(Constants.LetterTranscriptionExtra,alphabet.getLetterTranscription());
-                intent.putExtra(Constants.LetterPronunciationExtra,alphabet.getLetterPronunciation());
-                intent.putExtra(Constants.WordNameExtra, alphabet.getWordName());
-                intent.putExtra(Constants.WordTranscriptionExtra,alphabet.getWordTranscription());
-                intent.putExtra(Constants.WordTranslationExtra,alphabet.getWordTranslation());
-                context.startActivity(intent);
+//                Intent intent = new Intent(context,InsideAlphabetActivity.class);
+//                intent.putExtra(Constants.LetterPhotoExtra,alphabet.getLetterPhoto());
+//                intent.putExtra(Constants.WordPhotoExtra, alphabet.getWordPhoto());
+//                intent.putExtra(Constants.LetterTranscriptionExtra,alphabet.getLetterTranscription());
+//                intent.putExtra(Constants.LetterPronunciationExtra,alphabet.getLetterPronunciation());
+//                intent.putExtra(Constants.WordNameExtra, alphabet.getWordName());
+//                intent.putExtra(Constants.WordTranscriptionExtra,alphabet.getWordTranscription());
+//                intent.putExtra(Constants.WordTranslationExtra,alphabet.getWordTranslation());
+//                context.startActivity(intent);
             }
         });
     }
